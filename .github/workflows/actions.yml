@@ -1,6 +1,9 @@
 name: Append data data every hour
 
 on:
+  push:
+    branches:
+      - main
   schedule:
     - cron:  '0 * * * *'
 
