@@ -1,3 +1,6 @@
 *.csv
 *.php
 *.ndjson
+*venv/
+
+__pycache__/

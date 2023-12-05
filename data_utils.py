@@ -14,7 +14,7 @@ if TB_TOKEN is None:
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def send_satellite_data(data, token=TB_TOKEN):
+def send_satellite_data(filename, token=TB_TOKEN):
     logger.info(f"Sending satellite events to Tinybird")
 
     params = {
@@ -22,7 +22,7 @@ def send_satellite_data(data, token=TB_TOKEN):
         'token': token,
     }
 
-    data = read_ndjson('output.ndjson')
+    data = read_ndjson(filename)
     logging.info(f"Sending {len(data)} data to Tinybird")
         
     try:
