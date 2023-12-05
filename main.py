@@ -4,7 +4,7 @@ import datetime as dt
 import click
 
 @click.command()
-@click.option('--interval', default=1, help='Interval (in hours) for data extraction')
+@click.option('--interval', default=10, help='Interval (in minutes) for data extraction')
 @click.option('--format', default='ndjson', help='Format for saving data')
 @click.option('--save', default=True, help='Save data')
 @click.option('--send', default=True, help='Send data to Tinybird')
@@ -12,7 +12,7 @@ import click
 def main(interval, format, save, send):
     # Specify start and end times for data extraction
     start_time = dt.datetime.utcnow()
-    end_time = start_time + dt.timedelta(hours=interval)
+    end_time = start_time + dt.timedelta(minutes=interval)
 
     # Build URL for TLE data
     tle_url = "https://celestrak.org/NORAD/elements/gp.php?GROUP=planet&FORMAT=tle"

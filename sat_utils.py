@@ -59,8 +59,8 @@ def convert_tle_to_coordinates(satellites, start_time, end_time, interval_second
 
             for time in times:
                 satellite.compute(time)
-                latitudes.append(round(satellite.sublat/ephem.degree,4))
-                longitudes.append(round(satellite.sublong/ephem.degree,4))
+                latitudes.append(round(satellite.sublat/ephem.degree,2))
+                longitudes.append(round(satellite.sublong/ephem.degree,2))
                 timestamps.append(time.strftime("%Y-%m-%d %H:%M:%S"))
 
             satellite_data.append({
