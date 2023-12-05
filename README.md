@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is a Python script that extracts TLE satellite data and load it into Tinybird every hour.
+This is a Python script that extracts TLE satellite data and load it into Tinybird.
 
 ## Requirements
 

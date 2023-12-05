@@ -1,4 +1,4 @@
-name: Append data every hour
+name: Append new sata to satellite_data by demand or cronjob
 
 on:
   workflow_dispatch:
