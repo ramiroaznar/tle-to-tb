@@ -6,10 +6,10 @@ on:
     branches:
       - main
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '0 * * * *'
 
 jobs:
-  scheduled:
+  build-and-run:
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo content
